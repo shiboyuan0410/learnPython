@@ -46,6 +46,3 @@ if __name__ == "__main__":  # 当程序执行时
         print
         "爬取失败！"
         query_tickes()
-    else:
-        print
-        "爬取完毕！"
