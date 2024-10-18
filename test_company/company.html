@@ -1,0 +1,364 @@
+<!---->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>挂牌公司公告 - 全国中小企业股份转让系统</title>
+
+    <!-- 字体编码 -->
+    <meta charset="utf-8"/>
+
+    <!-- 关键字 -->
+    <meta name="keywords" content=""/>
+
+    <!-- 说明 -->
+    <meta name="description" content=""/>
+
+    <!-- 作者 -->
+    <meta name="author" content=""/>
+
+    <!-- 设置文档宽度、是否缩放 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+
+    <!-- 优先使用IE最新版本或chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- 360读取到这个标签立即钱换到极速模式 -->
+    <meta name="renderer" content="webkit"/>
+
+    <!-- 禁止百度转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <!-- UC强制竖屏 -->
+    <meta name="screen-orientation" content="portrait"/>
+
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"/>
+
+    <!-- UC强制全屏 -->
+    <meta name="full-scerrn" content="yes"/>
+
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="ture"/>
+
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app"/>
+
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+
+    <!-- window phone 点亮无高光 -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <!-- 安卓设备不自动识别邮件地址 -->
+    <meta name="format-detection" name="email=no"/>
+
+    <!-- iOS设备 -->
+    <!-- 添加到主屏幕的标题 -->
+    <meta name="apple-mobile-web-app-title" content="标题"/>
+
+    <!-- 是否启用webApp全屏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <!-- 设置状态栏的背景颜色，启用webapp模式时生效 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent/black/default"/>
+    <!-- 半透明/黑色/默认白色 -->
+
+    <!-- 禁止数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+
+    <!-- 智能添加广告条 -->
+    <meta name="apple-itunes-app" content="app-id=myappstoreID,affiliate-data=myaffiliatedata,app-argument=myurl"/>
+    <link rel="shortcut icon" href="/template/1/bluewise/_files/img/favicon.ico">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/template/1/bluewise/_files/js/plugins/respones/html5shiv.min.js"></script>
+    <script src="/template/1/bluewise/_files/js/plugins/respones/respond.min.js"></script>
+    <![endif]-->
+    <script src="/template/1/bluewise/_files/js/plugins/requireJS/require.min.js"></script>
+    <script id="base" src="/template/1/bluewise/_files/js/main.min.js" data-compress="true" data-debugMode="false"
+            base="/template/1/bluewise/_files"></script>
+
+    <menu style="display:none;width:0;height:0;">挂牌公司公告</menu>
+</head>
+<body>
+<div class="bg-loading" style="width: 100%;height: 100%;background-color: white;position: fixed;z-index: 9999;"></div>
+<input id="general_information_1" type="hidden" value="/products/neeq_listed_companies/general_information.html"/>
+<div id="root">
+    <!--Header-->
+    <div class="mw-header en">
+        <iframe class="iframe-top" src="../myhead.html" frameborder="0" width="100%" height="140px"
+                scrolling="no"></iframe>
+    </div>
+    <!--/Header-->
+    <!-- menuContainer -->
+    <div class="mw-submenu-container"></div>
+    <!--/menuContainer -->
+    <!--Banner-->
+    <div class="mw-banner-page">
+        <div class="container">
+            <div class="main-title clearfix">
+                <div id="titleSearch" class="fl">挂牌公司公告<span id="overviewContent"></span>
+                </div>
+                <div class="rightNav fr">
+		<span id="mbx">
+				<a href="/index.html" title="首页">首页</a><span style="margin:5px;">&gt;</span>
+				<a href="/disclosure/overview_information.html" title="信息披露">信息披露</a><span style="margin:5px;">&gt;</span>
+				<span data-url="/disclosure/announcement.html" data-name="挂牌公司公告">挂牌公司公告</span><span
+                id="rightOverviewContent"></span>
+		</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Banner-->
+    <!--Main-->
+    <div class="mw-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-9 col-md-push-3">
+                    <div class="mw-box mw-margin-bottom">
+                        <div class="mw-box-content">
+                            <div class="tit">挂牌公司公告</div>
+                            <div class="submit clearfix">
+                                <div class="suggest_box">
+                                    <div class="suggestbox">
+                                        <input type="text" id="companyCode" class="arrcity input"
+                                               placeholder="公司简称/拼音/代码" maxlength="200"/>
+                                        <div class="suggest ac_results"></div>
+                                    </div>
+                                </div>
+                                <input type="text" class="keyword" value="" name="keyword" maxlength="200"
+                                       placeholder="关键字" id="keyword"/>
+                                <input type="text" class="date" value="" name="date" placeholder="日期"/>
+                                <input type="hidden" id="startTime" name="startTime" class="form-control">
+                                <input type="hidden" id="endTime" name="endTime" class="form-control ">
+                                <button class="go cx" type="button" id="submit " value="GO">查询</button>
+                            </div>
+                            <div id="tips" style="padding: 0px 20px;color: #4d8dCd;">默认展示最近一个月的公告。</div>
+                            <div class="mw-names mw-tagnames no-margin">
+                                <div class="select_div">
+
+                                    <!--   <ul class="select_directory">
+                                             <li>Market stratification</li>
+                                          <li>Position Type</li>
+                                          <li>Announcement Type</li>
+                                      </ul> -->
+
+                                    <!--      <div class="select_conditions market">
+                                                   <span data-toggle="tooltip" data-placement="top" title="ALL" data-name="ALL" class="span_choose" data="">ALL</span>
+                                                   <span data-toggle="tooltip" data-placement="top" title="Innovative" data-name="Innovative"  data="1">Innovative</span>
+                                                   <span data-toggle="tooltip" data-placement="top" title="Base" data-name="Base"  data="0">Base</span>
+                                          </div>
+                                             <div class="select_conditions market2">
+                                                   <span data-toggle="tooltip" data-placement="top" title="ALL" data-name="ALL" class="span_choose" data="G">ALL</span>
+                                                   <span data-toggle="tooltip" data-placement="top" title="Market" data-name="Market" data="J">Market</span>
+                                                   <span data-toggle="tooltip" data-placement="top" title="Call auction" data-name="Call auction" data="Z">Call auction</span>
+                                              </div>
+                                          <div class="select_main">
+                                              <div class="select_conditions">
+                                                  <div class="contentSlide"></div>
+                                                  <div class="more_btn"></div>
+                                              </div>
+                                          </div>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list" id="table"></div>
+                </div>
+                <div class="barh col-md-3 col-md-pull-9 hidden-xs hidden-sm">
+                    <div class="treeNav clearfix">
+                        <input type="hidden" id="curNodeId" value="533"/>
+                        <div class=sideBar>
+                            <div class="active sideHeader" dnode="95">
+                                <a href="/disclosure/overview_information.html"><span>信息披露</span></a>
+                            </div>
+                            <ul class="navMenu">
+                                <!-- level 1 -->
+                                <li dnode="192" dnc="stock_transfer_notice"><span><a href="/disclosure/vocational.html"
+                                                                                     title="股转公告">股转公告</a></span>
+                                </li>
+                                <li dnode="533" dnc="companies_in_name_announcement"><span><a
+                                        href="/disclosure/announcement.html"
+                                        title="挂牌公司公告">挂牌公司公告</a></span></li>
+                                <li dnode="537" dnc="snadc_announcement"><span><a
+                                        href="/disclosure/snadc_announcement.html"
+                                        title="两网及退市公司公告">两网及退市公司公告</a></span></li>
+                                <li class="menu" dnode="199" dnc=""><span class="arrow">
+<a href="/disclosure/tradepublic.html" title="交易信息">交易信息</a>								 </span>
+                                    <ul class="subMenu sub_1" style="display:none">
+                                        <!-- level 2 -->
+                                        <li dnode="1133" dnc="trading_info"><span><a href="/disclosure/tradepublic.html"
+                                                                                     title="交易公开信息">交易公开信息</a></span>
+                                        </li>
+                                        <li dnode="1234" dnc="transfer_market_maker"><span><a
+                                                href="/disclosure/transfer_market_maker.html"
+                                                title="做市商间转让公开信息">做市商间转让公开信息</a></span></li>
+                                        <li dnode="1236" dnc="agreement_transfer"><span><a
+                                                href="/disclosure/agreement_transfer.html" title="大宗交易公开信息">大宗交易公开信息</a></span>
+                                        </li>
+                                        <li dnode="1238" dnc="specific_items_transfer"><span><a
+                                                href="/disclosure/specific_items_transfer.html"
+                                                title="特定事项协议转让公开信息">特定事项协议转让公开信息</a></span>
+                                        </li>
+                                        <li dnode="1240" dnc="prefer_stock_notice"><span><a
+                                                href="/disclosure/prefer_stock_notice.html" title="优先股公开信息">优先股公开信息</a></span>
+                                        </li>
+                                        <li dnode="2791" dnc="convertible_bond_gkxx"><span><a
+                                                href="/disclosure/convertible_bond_tradeinfo.html"
+                                                title="可转债交易公开信息">可转债交易公开信息</a></span></li>
+                                        <li dnode="1230" dnc="qfii"><span><a href="/disclosure/qfii.html"
+                                                                             title="QFII/RQFII持股公开信息">QFII/RQFII持股公开信息</a></span>
+                                        </li>
+                                        <li dnode="1123" dnc="tender_offer"><span><a
+                                                href="/disclosure/tender_offer.html"
+                                                title="要约收购/回购">要约收购/回购</a></span></li>
+                                    </ul>
+                                <li class="menu" dnode="202" dnc=""><span class="arrow">
+<a href="/disclosure/supervise_dynamic.html"
+   title="监管公开信息">监管公开信息</a>								 </span>
+                                    <ul class="subMenu sub_1" style="display:none">
+                                        <!-- level 2 -->
+                                        <li dnode="2854" dnc="supervise_dynamic"><span><a
+                                                href="/disclosure/supervise_dynamic.html" title="监管动态">监管动态</a></span>
+                                        </li>
+                                        <li dnode="629" dnc="enquiry_letter"><span><a
+                                                href="/disclosure/enquiry_letter.html" title="问询函">问询函</a></span>
+                                        </li>
+                                        <li dnode="625" dnc="self_regulatory_measures"><span><a
+                                                href="/disclosure/supervise.html" title="自律监管措施">自律监管措施</a></span>
+                                        </li>
+                                        <li dnode="627" dnc="disciplinary_aciton"><span><a
+                                                href="/disclosure/disciplinary_aciton.html"
+                                                title="纪律处分">纪律处分</a></span></li>
+                                        <li dnode="2856" dnc="trade_supervise"><span><a
+                                                href="/disclosure/trade_supervise.html"
+                                                title="交易监管">交易监管</a></span></li>
+                                        <li dnode="2858" dnc="securities_trader_supervise"><span><a
+                                                href="/disclosure/securities_trader_supervise.html"
+                                                title="主办券商及其他交易参与人监管">主办券商及其他交易参与人监管</a></span>
+                                        </li>
+                                        <li dnode="2860" dnc="intermediary_organ"><span><a
+                                                href="/disclosure/intermediary_organ.html"
+                                                title="中介机构监管">中介机构监管</a></span></li>
+                                        <li dnode="1119" dnc="reviewapplication"><span><a
+                                                href="/disclosure/reviewapplication.html" title="复核">复核</a></span>
+                                        </li>
+                                        <li dnode="1121" dnc="termination_listing"><span><a
+                                                href="/disclosure/termination_listing.html"
+                                                title="强制终止挂牌">强制终止挂牌</a></span></li>
+                                        <li dnode="1256" dnc="commitments"><span><a href="/disclosure/commitments.html"
+                                                                                    title="承诺事项及履行情况">承诺事项及履行情况</a></span>
+                                        </li>
+                                    </ul>
+                                <li class="menu" dnode="203" dnc=""><span class="arrow">
+<a href="/disclosure/listing_review.html" title="审核公开信息">审核公开信息</a>								 </span>
+                                    <ul class="subMenu sub_1" style="display:none">
+                                        <!-- level 2 -->
+                                        <li dnode="651" dnc="listing_review"><span><a
+                                                href="/disclosure/listing_review.html"
+                                                title="挂牌审核">挂牌审核</a></span></li>
+                                        <li dnode="2949" dnc="listing_gpgs_review"><span><a
+                                                href="/disclosure/listing_gpgs_review.html"
+                                                title="挂牌公示审核">挂牌公示审核</a></span></li>
+                                        <li dnode="1204" dnc="listing_dxfx_review"><span><a
+                                                href="/disclosure/listing_dxfx_review.html" title="挂牌同时发行审核">挂牌同时发行审核</a></span>
+                                        </li>
+                                        <li dnode="655" dnc="stock_issue_review"><span><a
+                                                href="/disclosure/review_open_information/stock_issue_review.html"
+                                                title="股票定向发行审核">股票定向发行审核</a></span></li>
+                                        <li dnode="2806" dnc="stock_prefer_review"><span><a
+                                                href="/disclosure/review_open_information/stock_prefer_review.html"
+                                                title="优先股发行审核">优先股发行审核</a></span></li>
+                                        <li dnode="659" dnc="major_asset_restructuring"><span><a
+                                                href="/disclosure/major_asset_restructuring.html"
+                                                title="重大资产重组审核">重大资产重组审核</a></span></li>
+                                        <li dnode="1262" dnc="convertible_bond_info"><span><a
+                                                href="/disclosure/convertible_bond_info.html"
+                                                title="可转债定向发行审核">可转债定向发行审核</a></span></li>
+                                        <li dnode="3174" dnc="t_delisted_project_list"><span><a
+                                                href="/disclosure/t_delisted_project_list.html"
+                                                title="两网及退市公司审核">两网及退市公司审核</a></span></li>
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Main-->
+
+    <!--Qrcode-->
+    <!-- <div class="mw-qrcode mw-margin-bottom hidden-md hidden-lg">
+        <div class="item">
+            <img src="/template/1/bluewise/_files/img/common/qr_wx.png"/>
+            NEEQ官方微信
+        </div>
+        <div class="item">
+            <img src="/template/1/bluewise/_files/img/common/qr_wb.png"/>
+            NEEQ官方微博
+        </div>
+    </div> -->
+    <!--/Qrcode-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-confirm">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">提交!</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+    <!--Footer-->
+    <div class="mw-footer">
+        <iframe src="../myfoot.html" frameborder="0" width="100%" height="80px" scrolling="no"></iframe>
+    </div>
+    <!--/Footer-->
+    <div class="modalFirst modal fade" tabinsdex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+         style="position: inherit">
+        <div id="windowModal" class="modal-dialog"
+             style="position: fixed;left: 0px;right: 0px;top: 0px; align-content: 0px;z-index: 999;">
+            <div class="modal-content modal-confirm">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        公告分类筛选结果
+                        <!--<span class="dialog">X</span>-->
+                    </div>
+                    <div class="modal-selected">
+                        <span></span>
+                    </div>
+                    <div class="modal-tips">温馨提示：支持对多个一级公告或一个一级公告里多个二级公告的筛选。</div>
+                </div>
+                <div class="modal-body">
+                    <div class="bodyTitle">选择公告分类</div>
+                    <div id="tree"></div>
+                </div>
+                <div class="modal-footer">
+                    <button name="okbtn" type="button" class="okbtn btn btn-info" data-dismiss="modal">确定</button>
+                    <button name="allbtn" type="button" class="allbtn btn btn-info" data-dismiss="modal">全部清除
+                    </button>
+                    <button name="clbtn" type="button" class="clbtn btn btn-info" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modalFirst modal-backdrop fade" style="display:none"></div>
+</div>
+<style>
+</style>
+<!--  <script src="/template/1/bluewise/_files/js/disclosure/subSlect.js"></script>   -->
+<script src="/template/1/bluewise/_files/js/disclosure/list_company_2.min.js"></script>
+</body>
+</html>
+<!---->

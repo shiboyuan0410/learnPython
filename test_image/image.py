@@ -33,7 +33,7 @@ def dowmloadPic(html, keyword):
         fp.close()
         countNum += 1
 
-
+#根据关键词从百度下载 图片
 if __name__ == "__main__":  # 当程序执行时
 
     headers = {
